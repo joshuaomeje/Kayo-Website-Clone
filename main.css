@@ -1,26 +1,189 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-body{
-   
-}
-
-.right-side-cntr{
-    width: 800px;
-    background-color: blue;
-    height: 900px;
-}
-
-.main-wrapper{
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: i;
+  }
+  
+  /* Layout */
+  .main-wrapper {
     display: flex;
+    width: 100%;
+  }
+  
+  .sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
     overflow: hidden;
-}
-
-.main-img{
-    height:900px;
+    width: 100%;
+  }
+  
+  .left {
     width: 630px;
-}
+    flex-shrink: 0;
+  }
+  
+  .main-img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 80px;
+    z-index: 2;
+  }
+  
+  /* Right side scrolls with the page */
+  .right {
+    width: calc(100% - 630px);
+    padding-bottom: 50px;
+  }
+  
+  /* Content container */
+  .right-side-cntr {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 50px;
+  }
+  
+  /* Scrolls naturally into this */
+  .projects-cntr {
+    background-color: aqua;
+    height: 500px;
+    margin: 100px 40px;
+  }
+  
+  /* Fonts */
+  @font-face {
+    font-family: i;
+    src: url(fonts/Inter-VariableFont_opsz\,wght\ -\ Copy.ttf);
+  }
+  
+  @font-face {
+    font-family: g;
+    src: url(fonts/Gambetta-Variable.ttf);
+  }
+  
+  @font-face {
+    font-family: a;
+    src: url(fonts/AntonSC-Regular.ttf);
+  }
+  
+  /* Typography & Nav */
+  .top-nav {
+    height: 90px;
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .nav-left {
+    display: flex;
+    gap: 30px;
+    font-family: i;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .contact-nav {
+    font-family: i;
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .contact-nav:hover {
+    border-width: 0;
+  }
+  
+  .main-cntr {
+    margin-top: 30px;
+  }
+  
+  .header-text {
+    font-family: a;
+    font-size: 160px;
+    line-height: 170px;
+    font-weight: 500;
+  }
+  
+  .header-img {
+    margin-right: 10px;
+  }
+  
+  .subtitle {
+    font-family: g;
+    font-style: italic;
+    font-size: 20px;
+    color: #0e101199;
+    padding-top: 40px;
+    font-weight: 500;
+  }
+  
+  .description {
+    font-family: i;
+    font-weight: 600;
+    font-size: 43px;
+    max-width: 500px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  
+  .about-us-header {
+    font-family: a;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 90px;
+    letter-spacing: 2px;
+    padding-top: 30px;
+  }
+  
+  .about-text,
+  .about-text2 {
+    font-family: i;
+    font-size: 20px;
+    padding-top: 40px;
+    color: #0e101199;
+    line-height: 30px;
+  }
+  
+  .about-text2 {
+    padding-bottom: 85px;
+  }
+  .page-section{
+    border-bottom: 2px solid black;
+  }
+
+
+  .brands-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    row-gap: 50px;
+    padding-bottom: 50px;
+  }
+  
